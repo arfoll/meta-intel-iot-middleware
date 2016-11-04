@@ -20,7 +20,8 @@ DEPENDS += " json-c udev "
 
 FILES_${PN}-imraa = "${bindir}/imraa"
 RDEPENDS_${PN}-imraa = "udev"
-FILES_${PN}-utils = "${bindir}/ \
+FILES_${PN}-utils = "${bindir}/mraa-gpio \
+                     ${bindir}/mraa-i2c
                     "
 
 # override this in local.conf to get a subset of bindings.

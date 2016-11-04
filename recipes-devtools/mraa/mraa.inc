@@ -14,7 +14,7 @@ EXTRA_OECMAKE_append = " -DINSTALLTOOLS:BOOL=ON -DIMRAA=ON -DFIRMATA=ON -DPYTHON
 FILES_${PN}-doc += "${datadir}/mraa/examples/"
 
 # Prepend mraa-utils to make sure bindir ends up in there
-PACKAGES =+ "${PN}-utils "
+PACKAGES =+ "${PN}-utils ${PN}-imraa "
 
 DEPENDS += " json-c udev "
 
@@ -44,7 +44,7 @@ do_compile_prepend () {
   sed -i 's/-dirty//' src/version.c
 }
 
-FILES_${PN}-utils = "${bindir}/.debug/"
+FILES_${PN}-dbg = "${bindir}/.debug/"
 
 ### Python ###
 

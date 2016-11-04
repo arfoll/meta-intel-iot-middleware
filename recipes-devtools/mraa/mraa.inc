@@ -9,7 +9,7 @@ S = "${WORKDIR}/git"
 
 inherit distutils-base pkgconfig python-dir cmake
 
-EXTRA_OECMAKE_append = " -DINSTALLTOOLS:BOOL=ON -DFIRMATA=ON -DPYTHON2_PACKAGES_PATH:FILEPATH=../${PYTHON_SITEPACKAGES_DIR} -DBASE_LIB_INSTALL_DIR=${base_libdir} -DCMAKE_SKIP_RPATH=ON"
+EXTRA_OECMAKE_append = " -DINSTALLTOOLS:BOOL=ON -DIMRAA-ON -DFIRMATA=ON -DPYTHON2_PACKAGES_PATH:FILEPATH=../${PYTHON_SITEPACKAGES_DIR} -DBASE_LIB_INSTALL_DIR=${base_libdir} -DCMAKE_SKIP_RPATH=ON"
 
 FILES_${PN}-doc += "${datadir}/mraa/examples/"
 
@@ -41,6 +41,8 @@ do_compile_prepend () {
   # trick
   sed -i 's/-dirty//' src/version.c
 }
+
+FILES_${PN}-utils = "${bindir}/.debug/"
 
 ### Python ###
 

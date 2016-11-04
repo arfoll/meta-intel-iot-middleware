@@ -19,7 +19,8 @@ PACKAGES =+ "${PN}-utils "
 DEPENDS += " json-c "
 
 FILES_${PN}-imraa = "${bindir}/imraa"
-DEPENDS_${PN}-imraa = " libudev "
+DEPENDS_${PN}-imraa = "libudev"
+RDEPENDS_${PN}-imraa = "libudev"
 FILES_${PN}-utils = "${bindir}/ \
                     "
 

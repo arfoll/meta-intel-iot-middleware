@@ -16,10 +16,10 @@ FILES_${PN}-doc += "${datadir}/mraa/examples/"
 # Prepend mraa-utils to make sure bindir ends up in there
 PACKAGES =+ "${PN}-utils "
 
-DEPENDS += " json-c libudev "
+DEPENDS += " json-c udev "
 
 FILES_${PN}-imraa = "${bindir}/imraa"
-RDEPENDS_${PN}-imraa = "libudev"
+RDEPENDS_${PN}-imraa = "udev"
 FILES_${PN}-utils = "${bindir}/ \
                     "
 

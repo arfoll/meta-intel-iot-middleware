@@ -22,7 +22,7 @@ RDEPENDS_${PN} += " mraa"
 # BINDINGS_pn-upm="python"
 # will result in only the python bindings being built/packaged.
 
-BINDINGS ?= "python nodejs java"
+BINDINGS ?= "python nodejs"
 
 PACKAGECONFIG ??= "${@bb.utils.contains('PACKAGES', 'node-${PN}', 'nodejs', '', d)} \
  ${@bb.utils.contains('PACKAGES', 'python-${PN}', 'python', '', d)} \

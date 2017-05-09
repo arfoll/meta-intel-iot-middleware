@@ -1,0 +1,26 @@
+From d043faf687eda18d9acda09e1bc028c931a68417 Mon Sep 17 00:00:00 2001
+From: Thomas Ingleby <thomas.ingleby@intel.com>
+Date: Tue, 8 Nov 2016 16:24:51 +0100
+Subject: [PATCH] imraa: correct imraa.service
+
+Should work in more environments now.
+
+Signed-off-by: Thomas Ingleby <thomas.ingleby@intel.com>
+---
+ imraa/imraa.service | 4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+
+diff --git a/imraa/imraa.service b/imraa/imraa.service
+index 17e6472..c3018e3 100644
+--- a/imraa/imraa.service
++++ b/imraa/imraa.service
+@@ -3,7 +3,7 @@ Description=imraa
+ 
+ [Service]
+ Type=oneshot
+-ExecStart="/usr/bin/imraa -a"
++ExecStart=/usr/bin/imraa -a
+ 
+ [Install]
+-WantedBy = multi-user.target
++WantedBy=multi-user.target
